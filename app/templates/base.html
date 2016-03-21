@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}Title{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,23 +11,21 @@
             <meta name="author" content="">
         {% endblock %}
 
-        {% assets "common_css" %}
             <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" />
-        {% endassets %}
 
         {% block css %}
         {% endblock %}
 
-        <script src="{{ url_for('static', filename='js/vendor/modernizr.min.js') }}"></script>
     </head>
 
     <body>
 
-        {% assets "common_js" %}
-            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-        {% endassets %}
-        
         {% block js %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endblock %}
+
+        {% block body %}
+
         {% endblock %}
         
     </body>
