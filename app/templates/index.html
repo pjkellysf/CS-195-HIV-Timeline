@@ -3,5 +3,6 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <h1>Inside Body Tags</h1>
+	{{ super() }}
+	<div>Not in base, specific to index.html</div>
 {% endblock %}
