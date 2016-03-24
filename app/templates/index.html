@@ -7,7 +7,9 @@ console.log("hello world!")
 </script>
 
 {% block body %}
+	<!-- Super function renders the HTML  -->
 	{{ super() }}
+	<!-- end super -->
 	<div>Not in base, specific to index.html</div>
 
 
