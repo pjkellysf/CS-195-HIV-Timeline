@@ -119,13 +119,23 @@ James is a Community Advisory Group Director of Bridge HIV. Bridge HIV is a glob
 #### Screen-by-screen specification
 //  To be completed once we get templates from the VMD team
 
-**Home Page: (Desktop)**
-![Home Page](img/Timeline wireframe-1.png) "Home Page Wireframe")
+**Home Page/Timeline: (Desktop)**
+![Desktop Home Page](img/Timeline wireframe-1.png "Home Page Wireframe 1")
 
-**Subpage:**
-![Subpage](http://i.imgur.com/AIVDyMV.png "Subpage Wireframe")
+![Desktop Home Page](img/Timeline wireframe-2.png "Home Page Wireframe 2")
 
-**Mobile:**
+**Subpage: (Desktop)**
+![Desktop Subpage](http://i.imgur.com/AIVDyMV.png "Subpage Wireframe")
+
+**Home Page/Timeline: (Mobile)**
+![Mobile Home Page](img/Timeline wireframe-3.png "Home Page Wireframe 1")
+
+![Mobile Home Page](img/Timeline wireframe-4.png "Home Page Wireframe 2")
+
+![Mobile Home Page](img/Timeline wireframe-5.png "Home Page Wireframe 3")
+
+**Subpage: (Mobile)**
+
 ![Mobile Subpages](http://i.imgur.com/LxK6aH0.png "Mobile Subpages")
 
 ---
