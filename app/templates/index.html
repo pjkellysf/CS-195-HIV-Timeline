@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block head %}
 
-<script type="text/javascript">
-console.log("hello world!")
-</script>
+	{% block title %}Home{% endblock %}
+	<!-- External CSS/JS files specific to this page can be referenced here -->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/main.css" /> -->
+	<!-- <script type="text/javascript" src="/static/js/file.js"></script> -->
+{% endblock %}
 
-{% block body %}
-	<!-- Super function renders the HTML  -->
+{% block content %}
+	<!-- super function renders HTML from base.html 
+		 that is within the content block. -->
 	{{ super() }}
 	<!-- end super -->
+
 	<div>Not in base, specific to index.html</div>
-
-
 
 {% endblock %}

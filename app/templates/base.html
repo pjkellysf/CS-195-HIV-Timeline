@@ -5,24 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        {% block meta %}
-            <meta name="description" content="">
-            <meta name="author" content="">
-        {% endblock %}
-
-            <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
-
+        <!-- External CSS/JS files FOR ALL pages are referenced here -->
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+        <!-- <script type="text/javascript" src="/static/js/file.js"></script> -->
     </head>
 
     <body>
 
-        {% block js %}
-            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-        {% endblock %}
-
-        {% block body %}
-<!--        html in the body goes here-->
+        {% block content %}
+        <!-- html in the body goes here -->
             <h1>Timeline</h1>
         
             <div id="nav">
