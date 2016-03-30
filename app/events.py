@@ -1,20 +1,21 @@
+import datetime
 from peewee import *
 
 db = SqliteDatabase('events.db')
 
 class Event(Model):
-	year = IntegerField(default=0)
+	year = DateTimeField(default=0)
 	deaths = IntegerField(default=0)
-	health = CharField()
-	international = CharField()
-	political = CharField()
-	social = CharField()
-	celeb = CharField()
+	health = TextField()
+	international = TextField()
+	political = TextField()
+	social = TextField()
+	celeb = TextField()
 
 	class Meta:
 		database = db
 
-
-if __name__ == '__main__':
+def createDb():
 	db.connect()
 	db.create_tables([Event], safe=True)
+	return db;
