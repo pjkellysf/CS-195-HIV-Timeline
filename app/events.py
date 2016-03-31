@@ -15,7 +15,28 @@ class Event(Model):
 	class Meta:
 		database = db
 
-def createDb():
+def initialize():
 	db.connect()
 	db.create_tables([Event], safe=True)
 	return db;
+
+def insertRow(dataList):
+	Event.create(
+		year = dataList[0],
+		deaths = int(dataList[1].replace(',', '')),
+		health = dataList[2],
+		international = dataList[3],
+		political = dataList[4],
+		social = dataList[5],
+		celeb = dataList[6]
+		)
+
+def displayTable():
+	for event in Event.select():
+		print(event)
+
+if __name__ == '__main__':
+	initialize()
+	displayTable()
+
+	
