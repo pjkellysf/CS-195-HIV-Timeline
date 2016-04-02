@@ -5,11 +5,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- External CSS/JS files FOR ALL pages are referenced here -->
-        <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
-        <!-- <script type="text/javascript" src="/static/js/file.js"></script> -->
-    </head>
+       
+        {% block head_css %}
+             <!-- External CSS files FOR ALL pages are referenced here -->
+            <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+        {% endblock %}
 
+        {% block head_js %}
+            <!-- External JS files FOR ALL pages are referenced here -->
+        {% endblock %}
+
+        {% block script %}
+        {% endblock %}
+
+    </head>
     <body>
 
         {% block content %}

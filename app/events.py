@@ -1,4 +1,5 @@
-import datetime
+import json
+from playhouse.shortcuts import model_to_dict, dict_to_model
 from peewee import *
 
 db = SqliteDatabase('events.db')
@@ -35,8 +36,13 @@ def displayTable():
 	for event in Event.select():
 		print(event)
 
+def jsonTable():
+	timelineJSON = []
+	for event in Event.select():
+		timelineJSON.append(json.dumps(model_to_dict(event)))
+	return timelineJSON
+
 if __name__ == '__main__':
 	initialize()
-	displayTable()
-
+	print(jsonTable())
 	

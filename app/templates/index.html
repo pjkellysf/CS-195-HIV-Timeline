@@ -3,9 +3,38 @@
 {% block head %}
 
 	{% block title %}Home{% endblock %}
-	<!-- External CSS/JS files specific to this page can be referenced here -->
-	<!-- <link rel="stylesheet" type="text/css" href="/static/css/main.css" /> -->
-	<!-- <script type="text/javascript" src="/static/js/file.js"></script> -->
+
+	{% block head_css %}
+		{{super()}}
+		<!-- External CSS files specific to this page can be referenced here -->
+		<link rel="stylesheet" type="text/css" href="/static/css/lib/vis.css">
+	{% endblock %}
+
+	{% block head_js %}
+		{{super()}}
+		<!-- External JS files specific to this page can be referenced here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/js/lib/vis.js"></script>
+	{% endblock %}
+	
+	{% block script %}
+		<script type="text/javascript">
+			var timelineArray = [];
+
+			{% for event in timelineJSON %}
+				timelineArray.push({{ event|safe }});
+				{% endfor %}
+
+			for (var i = 0; i < timelineArray.length; i++){
+				timelineArray[i].start = timelineArray[i].year + '-01-01';
+				timelineArray[i].end = timelineArray[i].year + '-12-31';
+				timelineArray[i].content = '' + timelineArray[i].deaths;
+			}
+
+		</script>
+	{% endblock %}
+
 {% endblock %}
 
 {% block content %}
@@ -14,6 +43,10 @@
 	{{ super() }}
 	<!-- end super -->
 
-	<div>Not in base, specific to index.html</div>
+	<div id="visualization"></div>
+
+	<script type="text/javascript" src="/static/js/timeline.js"></script>
 
 {% endblock %}
+	
+

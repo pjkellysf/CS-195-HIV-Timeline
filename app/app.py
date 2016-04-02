@@ -1,3 +1,4 @@
+import events
 from flask import Flask
 from flask import render_template
 
@@ -6,7 +7,8 @@ db = events.initialize()
 
 @app.route('/')
 def index():
-	return render_template("index.html")
+	timelineJSON = events.jsonTable()
+	return render_template("index.html", timelineJSON=timelineJSON)
 
 if __name__ == '__main__':
 	#App can be rendered at -> localhost:5000 or 127.0.0.1:5000
