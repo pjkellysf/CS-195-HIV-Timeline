@@ -1,3 +1,21 @@
+.body {
+  font-family: Proxima Nova;
+}
+
 .container {
     margin-top: 60px;
+}
+
+/* nav links */
+.nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.nav-item:hover,
+.nav-item:focus {
+  color: #fff;
+  text-decoration: none;
 }

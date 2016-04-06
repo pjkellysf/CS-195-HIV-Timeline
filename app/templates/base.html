@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       
+
         {% block head_css %}
              <!-- External CSS files FOR ALL pages are referenced here -->
             <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
@@ -24,19 +24,20 @@
         {% block content %}
         <!-- html in the body goes here -->
             <h1>Timeline</h1>
-        
-            <div id="nav">
-                <ul>
-                	<li class="nav"><a href="#">Timeline</a></li>
-                    <li class="nav"><a href="#">About</a></li>
-                    <li class="nav"><a href="#">Quiz</a></li>
-                    <li class="nav"><a href="#">Resources</a></li>
-                    <li class="nav"><a href="#">Search</a></li>
-                    <li class="nav"><a href="#">Contact</a></li>
-                </ul>	
-			</div>
-        
+
+            <div class="site-masthead">
+              <div class="container">
+                <nav class="nav">
+                  <a class="nav-item active" href="#">Home</a>
+                  <a class="nav-item" href="#">New features</a>
+                  <a class="nav-item" href="#">Press</a>
+                  <a class="nav-item" href="#">New hires</a>
+                  <a class="nav-item" href="#">About</a>
+                </nav>
+              </div>
+            </div>
+
         {% endblock %}
-        
+
     </body>
 </html>
